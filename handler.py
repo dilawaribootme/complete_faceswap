@@ -30,7 +30,7 @@ def get_face_swap_model(model_path: str):
 
 def get_face_analyser(model_path: str,
                       torch_device: str,
-                      det_size=(620, 620)):
+                      det_size=(1024, 1024)):
 
     if torch_device == 'cuda':
         providers=['CUDAExecutionProvider']
