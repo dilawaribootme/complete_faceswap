@@ -55,7 +55,7 @@ class TestGetFaceAnalyser:
             root="./checkpoints",
             providers=['CUDAExecutionProvider']
         )
-        mock_analyser.prepare.assert_called_once_with(ctx_id=0, det_size=(320, 320))
+        mock_analyser.prepare.assert_called_once_with(ctx_id=0, det_size=(1024, 1024))
         assert result == mock_analyser
 
     @patch('handler.insightface.app.FaceAnalysis')
